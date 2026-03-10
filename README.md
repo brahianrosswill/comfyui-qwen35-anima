@@ -15,6 +15,8 @@ Qwen 3.5 4B is **not** a standard transformer — it's a hybrid model alternatin
 
 ## Installation
 
+All files are available at: **[lylogummy/anima2b-qwen-3.5-4b](https://huggingface.co/lylogummy/anima2b-qwen-3.5-4b)**
+
 1. Clone this repo into your ComfyUI `custom_nodes` directory:
 
    ```
@@ -22,13 +24,28 @@ Qwen 3.5 4B is **not** a standard transformer — it's a hybrid model alternatin
    git clone https://github.com/GumGum10/comfyui-qwen35-anima.git
    ```
 
-2. Download `qwen35_4b.safetensors` from [nightknocker/cosmos-qwen3.5 (4b)](https://huggingface.co/nightknocker/cosmos-qwen3.5/tree/main/4b) and place it in:
+2. Download `qwen35_4b.safetensors` from [text_encoders/](https://huggingface.co/lylogummy/anima2b-qwen-3.5-4b/tree/main/text_encoders) and place it in:
 
    ```
    ComfyUI/models/text_encoders/qwen35_4b.safetensors
    ```
 
-3. Restart ComfyUI.
+3. Download `calibration_params.safetensors` and `rotation_matrix.safetensors` from [calibration/](https://huggingface.co/lylogummy/anima2b-qwen-3.5-4b/tree/main/calibration) and place them in the custom node folder:
+
+   ```
+   ComfyUI/custom_nodes/comfyui-qwen35-anima/calibration_params.safetensors
+   ComfyUI/custom_nodes/comfyui-qwen35-anima/rotation_matrix.safetensors
+   ```
+
+4. Download the tokenizer files from [tokenizer/](https://huggingface.co/lylogummy/anima2b-qwen-3.5-4b/tree/main/tokenizer) and place them in:
+
+   ```
+   ComfyUI/custom_nodes/comfyui-qwen35-anima/qwen35_tokenizer/
+   ```
+
+   (Or skip this step — the tokenizer will auto-download from HuggingFace on first use.)
+
+5. Restart ComfyUI.
 
 ## Usage
 
