@@ -93,11 +93,6 @@ Fixed 5 critical bugs in the SSM block based on the [reference Mamba2 implementa
 - Full weight loading (426/426 keys, 4.14B parameters)
 - ComfyUI CLIP-compatible with Anima 2B diffusion models
 
-## Known Limitations
-
-- **Tokenizer mismatch**: The model has a 248,320-token vocabulary (151,936 Qwen3 + 96,384 extra tokens in 3 blocks of 32,128 = T5 vocab size). We currently use the standard Qwen3 tokenizer, leaving the extra embedding rows untouched. nightknocker's private tokenizer likely maps differently.
-- **Closed training pipeline**: The original author (nightknocker) has stated that reverse-engineered implementations may not perfectly match the private inference code. Weights were trained coupled to his specific code path.
-
 ## Credits
 
 - **Anima 2B**: [circlestone-labs](https://huggingface.co/circlestone-labs/Anima)
